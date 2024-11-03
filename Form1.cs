@@ -16,5 +16,15 @@ namespace $safeprojectname$
         {
             InitializeComponent();
         }
+
+        [Route("api/[Controller]")]
+        [ApiController]
+        public class NameController : ControllerBase{
+            [HttpGet]
+            public IActionResult GetName(){
+                return Ok(new{ name = "Alexia"});
+            }
+        }
+
     }
 }
